@@ -1,0 +1,30 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color:#f4f4f4;
+    color: black;
+}
+header{
+    background-color: #333;
+    color: white;
+}
+a:hover{
+    color: yellow;
+}
+section{
+    background: white;
+    border: 1px solid #ccc;
+}
+img{
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+ul{
+    list-style-type: square;
+    align-items:center;
+}
+footer{
+    width: 1000vw;
+    align-items: center;
+    background-color:#ddd;
+}

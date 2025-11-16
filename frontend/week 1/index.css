@@ -1,0 +1,33 @@
+
+p{
+    font-size:20px ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#content{
+    width: 50vw;
+    border: 2px solid rgb(156, 114, 114);
+    padding: 10px;
+    margin: 10px auto;
+    background-color: lightgray;
+    box-shadow: 7px 9px 20px 3px #4a2a2a;
+}
+#external-css{
+color: green;
+}
+p h2{
+    color : purple}
+p::first-letter{
+    font-size: 30px;
+    font-weight: bold;
+    color: orange;
+}
+p:hover{
+    background-color: yellow;
+    cursor: pointer;
+}
+li:nth-child(odd){
+    color: lightgray;
+}
+li:nth-child(even){
+    color: rgb(224, 7, 116);
+}
