@@ -1,0 +1,39 @@
+.parent{
+    background: rgb(169, 110, 44);
+    font-size: 1 rem;
+    height: 70vh;
+
+    display: flex;
+    gap: 1 rem;
+    /* space between dont include start and end point ,space around does and space evenly */
+    justify-content: space-around;
+    /* content will not be compress will go down if no sapce or mobile view */
+    flex-wrap: wrap; 
+    flex-direction: row;
+    /* put the items in center via y axis where justify content via x axis */
+    align-items: center;
+}
+
+.parent>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:gray;
+    width: 80px;
+    height:80px;
+    margin: 1rem;
+
+}
+.parent>div:nth-child(7){
+    /* order: -1; */
+    /* align-self: flex-start; */
+    flex-grow: 1;
+}
+.item3{
+    /* dubles the growth of box then item 7 */
+flex-grow:2;
+}
+
+.parent>div:nth-child(even){
+    background-color: rgb(96, 65, 25);
+}

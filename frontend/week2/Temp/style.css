@@ -1,0 +1,48 @@
+/* costume variable */
+:root{
+  --primary-color: rgb(39, 39, 59);
+}
+body {
+  margin: 0;
+}
+
+.parent {
+  background: grey;
+  padding: 1rem;
+  position: relative;
+  /* content will be comprised inside the box  */
+  box-sizing: border-box;
+}
+.c1 {
+  background: Red;
+}
+
+/* position: static, relative, absolute, fixed, sticky */
+/* top, bottom, left, right */
+.c2 {
+  background: green;
+  /* static for normal left to right view point */
+  /* position: static; */
+  /* relative for childern so it can be absolute inside relative parent position */
+  /* position: relative; */
+  /* position: absolute; */
+  /*for navbar on the top */
+  /*position: sticky; */
+  top: 2rem;
+  bottom: 2rem;
+  right: 2rem;
+}
+.c3 {
+  background: blue;
+}
+
+.c1,
+.c2,
+.c3 {
+  color: white;
+  font-size: 2rem;
+  height: 100px;
+}
+#bl{
+  background:var(--primary-color);
+}

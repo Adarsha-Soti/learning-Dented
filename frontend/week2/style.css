@@ -1,0 +1,49 @@
+/* section{
+    border: 2px solid black;
+}
+section * {
+    background: red;
+    border: 2px solid black;
+    padding: 1 rem;
+
+} 
+ section p {
+    background: red;
+    border: 2px solid black;
+    padding: 1 rem;
+
+} 
+
+section >p {
+    background: red;
+    border: 2px solid black;
+    padding: 1 rem;
+
+} */
+/* section + div{
+    background: antiquewhite;
+ }
+section ~ div{
+    color: rgb(226, 101, 43);
+}
+p + div> div +p{
+    background-color: aquamarine;
+}
+  attribute selector 
+ a[href]{
+    color:red;
+    font-size: 2rem;
+ }
+ [href="http://google.com"]{
+    text-decoration: none;
+ }
+
+ p::first-letter{
+    font-size: 2rem;
+    color: rgb(113, 72, 9);
+ }
+ a:hover{
+ color:burlywood;
+ font-size: 3rem;
+ } */
+  
