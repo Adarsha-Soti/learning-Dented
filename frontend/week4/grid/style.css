@@ -1,0 +1,121 @@
+.grid{
+    background-color: rgb(62, 45, 22);
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: 300px repeat(3,300px);
+    grid-template-rows: repeat(5,100px);
+
+    gap: 10px;
+}
+.item_1{
+    background: #dfc5c5;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.item_2{
+    background: #89c393;
+    grid-column: 3;
+}
+.item_3{
+    background: #9ca3e0;
+    grid-column: 1 / span 2;
+    grid-row: 4 ;
+}
+.item_4{
+    background: #c67a9d;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.rid{
+    background-color: #348f51;
+    display: grid;
+    width: 100 vw;
+    gap: 10px;
+    grid-template-columns:  repeat(3,1fr) 2fr;
+    grid-template-rows: 50px repeat(4,150px) 50px;
+
+    grid-template-areas:
+    "header header header header"
+    "hero hero hero menu"
+    "hero hero hero menu"
+    "main main main menu"
+    "main main main menu"
+    "footer footer footer footer";
+}
+.rid> .item_1{
+    grid-area: header;
+    background-color: antiquewhite;
+}
+.rid> .item_2{
+    grid-area: hero;
+    background-color: antiquewhite;
+}
+.rid> .item_3{
+    grid-area: main;
+    background-color: antiquewhite;
+}
+.rid> .item_4{
+    grid-area: menu;
+    background-color: antiquewhite;
+}
+.rid> .item_5{
+    grid-area: footer;
+    background-color: antiquewhite;
+}
+
+.container{
+    display: grid;
+    background-color: rgb(106, 106, 159);
+    width: 100vw;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-template-rows:repeat(8,50px) ;
+    gap:5px;
+
+    grid-template-areas: 
+    "header header header"
+    "sub sub sub"
+    "big1 big1 small1"
+    "big1 big1 small2"
+    "small3 big2 big2"
+    "small4 big2 big2"
+    "small5 big2 big2"
+    "footer footer footer";
+}
+.container> div{
+ background: #8d3c3c;
+}
+.container> .item_1{
+    grid-area: header;
+}
+.container> .item_2{
+    grid-area: sub;
+}
+.container> .item_3{
+    grid-area: big1;
+}
+.container> .item_4{
+    grid-area: small1;
+}
+.container> .item_5{
+    grid-area: small2;
+}
+.container> .item_6{
+    grid-area: small3;
+}
+.container> .item_7{
+    grid-area: small4;
+}
+.container> .item_8{
+    grid-area: small5;
+}
+.container> .item_9{
+    grid-area: big2;
+}
+.container> .item_10{
+    grid-area: footer;
+}
