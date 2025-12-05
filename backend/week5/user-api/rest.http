@@ -1,0 +1,22 @@
+GET http://localhost:3000/api/v1/users
+
+###
+POST http://localhost:3000/api/v1/users
+Content-Type: application/json
+
+{
+    "name" : "Amar",
+    "address" : "Central",
+    "phone" : 500000
+}
+
+###
+PATCH http://localhost:3000/api/v1/users/2
+Content-Type: application/json
+
+{
+    "address": "Rockdale"
+}
+
+###
+DELETE http://localhost:3000/api/v1/users/2

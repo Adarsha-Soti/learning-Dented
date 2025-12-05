@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="userlist">
+
+    </ul>
+    <button onclick="fetchuser()">GET REQUEST</button>
+
+    <input type="text" name="name" id="name">
+    <input type="text" name="address" id="address">
+    <input type="text" name="phone" id="phone">
+    <button onclick="createuser()">CREATE USER</button>
+</body>
+
+<script>
+    const fetchuser = async () => {
+        let response = await fetch('http://localhost:3000/api/v1/users');
+        let data = await response.json();
+
+        console.log(data);
+
+        let userlist = document.getElementById('userlist');
+
+        for (item of data.users) {
+            let user = ` <li>
+                Name: <span id="name">${item.name}</span>
+                address: <span id="address">${item.address}</span>
+            </li>`
+
+            userlist.innerHTML = userlist.innerHTML + user;
+        }
+    }
+
+    const createuser = async () => {
+        let nameValue = document.getElementById('name').value;
+        let addressValue = document.getElementById('address').value;
+        let phoneValue = document.getElementById('phone').value;
+
+        let response = await fetch('http://localhost:3000/api/v1/users', {
+            method: 'POST', // Specify the method as POST
+            headers: {
+                'Content-Type': 'application/json' // Indicate that the body contains JSON data
+            },
+            body: JSON.stringify({
+                name: nameValue,
+                address: addressValue,
+                phone: phoneValue
+            })
+        })
+
+        let data = await response.json();
+
+        alert(data.message);
+    }
+</script>
+
+</html>
