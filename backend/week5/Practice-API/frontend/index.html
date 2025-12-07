@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"/>
+    <title>Api practice </title>
+</head>
+<body>
+    <h2>user form </h2>
+    <form action="submit" method="post">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+    <br><br>
+
+    <label for="familyName">Family Name:</label>
+    <input type="text" id="familyName" name="familyName" required>
+    <br><br>
+
+    <label for="contact">Phone Number:</label>
+    <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" placeholder="your number" required>
+    <br><br>
+
+    <button type="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Physics Bounce</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #b5b5cb; /* Dark background */
+    }
+
+    .stage {
+        position: relative;
+        height: 400px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end; /* Align ball to the floor */
+        border-bottom: 2px solid #555; /* The Floor */
+    }
+
+    .ball {
+        width: 50px;
+        height: 50px;
+        background: radial-gradient(circle at 15px 15px, #ff5e62, #ff9966);
+        border-radius: 50%;
+        
+        /* The Animation Configuration */
+        animation: bounce 2s infinite;
+    }
+
+    .shadow {
+        position: absolute;
+        bottom: -10px;
+        width: 50px;
+        height: 10px;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 50%;
+        animation: shadow-scale 2s infinite;
+        filter: blur(2px);
+        z-index: -1;
+    }
+
+    /* PHYSICS EXPLANATION:
+       1. translateY: Moves the ball up (negative) and down (0).
+       2. scale: Squashes the ball slightly when it hits the floor.
+       3. timing-function: 
+          - ease-in: Accelerates (Gravity pulling down).
+          - ease-out: Decelerates (Gravity fighting the upward momentum).
+    */
+    @keyframes bounce {
+        0% {
+            transform: translateY(-300px);
+            animation-timing-function: ease-in;
+        }
+        /* First Impact (Fastest) */
+        15% {
+            transform: translateY(0) scale(1.1, 0.9); /* Squash effect */
+            animation-timing-function: ease-out;
+        }
+        /* First Bounce (High) */
+        30% {
+            transform: translateY(-200px) scale(1);
+            animation-timing-function: ease-in;
+        }
+        /* Second Impact */
+        45% {
+            transform: translateY(0) scale(1.05, 0.95);
+            animation-timing-function: ease-out;
+        }
+        /* Second Bounce (Medium) */
+        60% {
+            transform: translateY(-100px) scale(1);
+            animation-timing-function: ease-in;
+        }
+        /* Third Impact */
+        70% {
+            transform: translateY(0) scale(1.02, 0.98);
+            animation-timing-function: ease-out;
+        }
+        /* Third Bounce (Low) */
+        80% {
+            transform: translateY(-40px) scale(1);
+            animation-timing-function: ease-in;
+        }
+        /* Fourth Impact */
+        85% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+        }
+        /* Little Hop */
+        90% {
+            transform: translateY(-10px);
+            animation-timing-function: ease-in;
+        }
+        /* Settle */
+        95%, 100% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+        }
+    }
+
+    /* Animate shadow to shrink when ball goes up */
+    @keyframes shadow-scale {
+        0% { transform: scale(0.5); opacity: 0.2; animation-timing-function: ease-in; }
+        15% { transform: scale(1.2); opacity: 1; animation-timing-function: ease-out; }
+        30% { transform: scale(0.7); opacity: 0.3; animation-timing-function: ease-in; }
+        45% { transform: scale(1.1); opacity: 1; animation-timing-function: ease-out; }
+        60% { transform: scale(0.8); opacity: 0.4; animation-timing-function: ease-in; }
+        70% { transform: scale(1); opacity: 1; animation-timing-function: ease-out; }
+        80% { transform: scale(0.9); opacity: 0.5; animation-timing-function: ease-in; }
+        85% { transform: scale(1); opacity: 1; animation-timing-function: ease-out; }
+        90% { transform: scale(0.95); opacity: 0.6; animation-timing-function: ease-in; }
+        95%, 100% { transform: scale(1); opacity: 1; }
+    }
+</style>
+</head>
+<body>
+
+    <div class="stage">
+        <div class="ball"></div>
+        <div class="shadow"></div>
+    </div>
+
+</body>
+</html>x -->
