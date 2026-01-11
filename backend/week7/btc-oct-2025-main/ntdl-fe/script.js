@@ -23,7 +23,7 @@ const renderTaskList = () => {
 
   let goodTrList = "";
   let goodIndex = 0;
-
+ 
   // populate good Tr list using goodTaskList
   for (let item of goodTaskList) {
     goodIndex += 1;
