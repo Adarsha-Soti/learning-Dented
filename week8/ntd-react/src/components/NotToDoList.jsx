@@ -2,26 +2,33 @@ import React, { useEffect, useState } from "react";
 import AddTask from "./AddTask";
 import TaskList from "./TaskList";
 import TotalHour from "./TotalHour";
+import axios from "axios";
 
 const NotToDoList = () => {
   const [taskList, setTaskList] = useState([
-    {
-      id: "1",
-      task: "Task 1",
-      hour: 10,
-      type: "good",
-    },
-    {
-      id: "2",
-      task: "Task 2",
-      hour: 20,
-      type: "bad",
-    },
+    // {
+    //   id: "1",
+    //   task: "Task 1",
+    //   hour: 10,
+    //   type: "good",
+    // },
+    // {
+    //   id: "2",
+    //   task: "Task 2",
+    //   hour: 20,
+    //   type: "bad",
+    // },
   ]);
   const [totalHours,setTotalHours]=useState(0);
+
+  const dataFormServer=async()=>{
+  let response= await axios.get("http://localhost:3000/api/v1/tasks")
+   setTaskList(response.data.tasks);
+  }
 useEffect(()=>{
-  let dataFormLocal=localStorage.getItem('taskList');
-  setTaskList(JSON.parse(dataFormLocal)||[]);
+  // let dataFormLocal=localStorage.getItem('taskList');
+  // setTaskList(JSON.parse(dataFormLocal)||[]);
+  dataFormServer();
 },[])
 
   useEffect(()=>{

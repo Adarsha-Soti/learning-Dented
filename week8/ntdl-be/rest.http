@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:3000
+###
+GET {{baseUrl}}/
+
+
+###
+## CRETE TASK
+POST {{baseUrl}}/api/v1/tasks
+Content-Type: application/json
+
+{
+
+    "task" : "database Task",
+    "hour" : 20,
+    "type" : "good"
+    }
+
+
+### READ TASK
+GET {{baseUrl}}/api/v1/tasks?type=good
+###
+GET {{baseUrl}}/api/v1/tasks/693f83534ab37eb2ff18cbc6
+
+### Update task
+PATCH  {{baseUrl}}/api/v1/tasks/693f83534ab37eb2ff18cbc6
+Content-Type: application/json
+
+{
+    "task":  "PATCH TASK 2",
+    "hour": 5,
+    "type": "good"
+}

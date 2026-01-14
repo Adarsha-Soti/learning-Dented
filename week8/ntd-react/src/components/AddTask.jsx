@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 
 const AddTask = ({ setTaskList }) => {
@@ -25,19 +26,21 @@ const AddTask = ({ setTaskList }) => {
     return rString;
   };
 
-  const addTask = () => {
+  const addTask = async() => {
     let taskObject = {
-      id: randomIdGenerator(),
       task,
       hour,
       type,
     };
 
+    let response= await axios.post("http://localhost:3000/api/v1/tasks",taskObject);
+    taskObject.id= response.data.task._id;
     // let array1 = [1,2,3];
 
     // array1 = [...array1, 10];
 
     setTaskList((previous) => {
+
       let tempTaskList=[...previous,taskObject]
      
       return tempTaskList;

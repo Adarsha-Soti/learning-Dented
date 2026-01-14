@@ -1,19 +1,19 @@
 import React from "react";
 
-const List = ({ title, type, taskList, deleteTask }) => {
+const List = ({ title, type, taskList, deleteTask,swapTask}) => {
   return (
     <div className="col-12 col-md-6 text-center">
       <h2>{title}</h2>
       <hr />
       <table className="table table-striped">
         <tbody>
-          {taskList.map((item, index) => {
+          {taskList.map((item) => {
             return (
               <tr>
                 <td scope="row">
-                  {index + 1}
+                  {/* {index + 1} */}
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     value=""
                     id="flexCheckDefault"
@@ -26,36 +26,36 @@ const List = ({ title, type, taskList, deleteTask }) => {
                     <>
                       <button
                         type="button"
-                        class="btn btn-danger"
+                        className="btn btn-danger"
                         onClick={() => {
                           deleteTask(item.id);
                         }}
                       >
-                        <i class="fa-solid fa-dumpster"></i>
+                        <i className="fa-solid fa-dumpster"></i>
                       </button>
 
-                      <button type="button" class="btn btn-success">
-                        <i class="fa-solid fa-arrow-right"></i>
+                      <button type="button" className="btn btn-success" onClick={()=>{swapTask(item.id,item.type)}}>
+                        <i className="fa-solid fa-arrow-right"></i>
                       </button>
                     </>
                   ) : (
                     <>
-                      <button type="button" class="btn btn-warning">
-                        <i class="fa-solid fa-arrow-left"></i>
+                      <button type="button" className="btn btn-warning" onClick={()=>{swapTask(item.id,item.type)}}>
+                        <i className="fa-solid fa-arrow-left"></i>
                       </button>
                       <button
                         type="button"
-                        class="btn btn-danger"
+                        className="btn btn-danger"
                         onClick={() => {
                           deleteTask(item.id);
                         }}
                       >
-                        <i class="fa-solid fa-dumpster"></i>
+                        <i className="fa-solid fa-dumpster"></i>
                       </button>
                     </>
                   )}
 
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" className="btn btn-primary">
                     Edit
                   </button>
                 </td>
