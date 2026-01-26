@@ -1,0 +1,11 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.hero {
+  height: 80vh;
+  background-image: url(https://images.pexels.com/photos/28730007/pexels-photo-28730007.jpeg?cs=srgb&dl=pexels-raymond-petrik-1448389535-28730007.jpg&fm=jpg);
+
+  background-position: center;
+  background-size: cover;
+}
